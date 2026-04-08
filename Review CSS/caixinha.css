@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.mamae{
+    width: 920px;
+    height: 800px;
+    margin: auto;    /*centralizar sem o flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;   
+    padding: 20px;
+    border: 2px dashed salmon;
+}
+
+.mamae_filinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: brown;
+    border: 2px dashed black;
+}
+
+.filinho--azul{
+    background-color: blue;
+    color: white;
+}
