@@ -1,0 +1,20 @@
+{
+  "usuario": [
+    {
+      "id": "1",
+      "nome": "Rafa Linda",
+      "idade": "17"
+    },
+    {
+      "id": "9_ytfPa6gns",
+      "nome": "Bia",
+      "idade": "17"
+    },
+    {
+      "id": "JFXpr4agp2c",
+      "nome": "anne",
+      "idade": "17"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

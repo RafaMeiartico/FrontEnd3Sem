@@ -1,0 +1,88 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "id": "1",
+      "Nome": "Rafuxa",
+      "Sobrenome": "Linda",
+      "Email": "rafalinda@gmail.com"
+    },
+    {
+      "nome": "Bia",
+      "sobrenome": "Paz",
+      "email": "biapaz@gmail.com",
+      "id": "PqwPwS_l6LM"
+    },
+    {
+      "nome": "Anne",
+      "sobrenome": "Nicole",
+      "email": "Anne@gmail.com",
+      "id": "BYS3meZ6kmI"
+    },
+    {
+      "nome": "maria",
+      "sobrenome": "cordeiro",
+      "email": "cordmakaka@gmail.com",
+      "id": "xJOEiQGMSHA"
+    },
+    {
+      "nome": "Milena",
+      "sobrenome": "mares",
+      "email": "maresmi@gmail.com",
+      "id": "dQBDIQK9TdU"
+    },
+    {
+      "nome": "Rawany",
+      "sobrenome": "manuel",
+      "email": "raw@gmail.com",
+      "id": "1xHcXH_eCLs"
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Caderno",
+      "quantidade": "4",
+      "preco": "20,00",
+      "id": "tJmpOxGOYHw"
+    },
+    {
+      "nome": "Livro",
+      "quantidade": "2",
+      "preco": "7,00",
+      "id": "Z7aYvTitBiY"
+    },
+    {
+      "nome": "Lápis",
+      "quantidade": "50",
+      "preco": "1,00",
+      "id": "_2rE75owBz0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
