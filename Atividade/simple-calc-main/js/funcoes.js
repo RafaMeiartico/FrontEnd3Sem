@@ -38,24 +38,36 @@ function calcular() {
     }
 
 
-    console.log(n1);
-    console.log(n2);
-    console.log(op);
-    console.log(resultado);
+    const objCalculo = {
+        n1: n1,
+        n2: n2,
+        op: op,
+        resultado: resultado
+    };
 
+    //chamar a função cadastrarNaAPI(objIMC)
+    const retorno = cadastrarNaAPI(objCalculo);
+
+    if (retorno) {
+        buscarCalculo(); //faz um get e coloca tudo no html (tabela)
+
+    } else {
+        alert("Não foi possivel cadastrar");
+    }
 
     //saída
     // console.log(`Resultado da operação: ${resultado}`);
     document.getElementById('resultado').innerHTML = resultado;
 
 
-    document.getElementById('cadastro').innerHTML =
-        `<tr>
+    document.getElementById('cadastro').innerHTML = `
+    <article>
         <span><strong>Primeiro Número:</strong> ${n1}</span>
-            <span><strong>Segundo Número:</strong> ${n2}</span>
-            <span><strong>Operação:</strong> ${op}</span>
-            <span><strong>Resultado:</strong> ${resultado}</span>
-        </tr>`;
+        <span><strong>Segundo Número:</strong> ${n2}</span>
+        <span><strong>Operação:</strong> ${op}</span>
+        <span><strong>Resultado:</strong> ${resultado}</span>
+    </article>
+`;
 }
 
 /**
@@ -84,3 +96,56 @@ function dividir(valor1, valor2) {
 }
 
 
+
+async function cadastrarNaAPI(objetoCacular) {
+
+    try {
+        console.log(objetoCacular);
+
+        const resposta = await fetch("http://localhost:3000/calculo", {
+
+            method: "POST",
+            body: JSON.stringify(objetoCacular),
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8"
+            }
+        });
+        return true;
+
+
+    } catch (error) {
+        console.log(error);
+        return false;
+    }
+}
+
+
+async function buscarCalculo() {
+    try {
+        const retorno = await fetch("http://localhost:3000/calculo")
+        const dadosRetornados = await retorno.json();
+
+
+        await console.log(dadosRetornados);
+
+
+        const tabela = document.getElementById("cadastro");
+        let template = "";
+
+        for (let i = 0; i < dadosRetornados.length; i++) {
+
+            template +=
+                `<article class="data__card-result">
+            <span><strong>Primeiro Número:</strong> ${dadosRetornados[i].n1}</span>
+            <span><strong>Segundo Número:</strong> ${dadosRetornados[i].n2}</span>
+            <span><strong>Operação:</strong> ${dadosRetornados[i].op}</span>
+            <span><strong>Resultado:</strong> ${dadosRetornados[i].resultado}</span>
+        </article>`;
+        }
+
+        tabela.innerHTML = template;
+
+    } catch (error) {
+        console.log(error);
+    }
+}

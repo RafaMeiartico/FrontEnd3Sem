@@ -30,33 +30,13 @@ function calcular(params) {
         textoSituacao: textoSituacao
     };
 
-    //chamar a função cadastrarNaAPI(objIMC)
-    const retorno = cadastrarNaAPI(objIMC);
+    const retorno = cadastrarNaAPI(objCalculo);
+    console.log();
 
     if (retorno) {
-        const tabela = document.getElementById("cadastro");
+       buscarIMCs();
 
-
-        //toFixed mostra só duas casas depois da virgula
-        listar.innerHTML +=
-            `<tr>
-        <td>${nome}</td>
-        <td>${altura}</td>
-        <td>${peso}</td>
-        <td>${IMC.toFixed(2)}</td> 
-        <td>${textoSituacao}</td>
-        </tr>`;
-
-        //limpar os campos do formulário
-
-        document.getElementById("nome").value = "";
-        document.getElementById("altura").value = "";
-        document.getElementById("peso").value = "";
-
-        alert(`${nome} foi cadastrado no banco
-            Nome: ${nome}
-            IMC: ${IMC}
-            Situação: ${textoSituacao}`);
+       alert("Calculo feito com sucesso!");
 
     } else {
         alert("Não foi possivel cadastrar");
@@ -122,6 +102,10 @@ async function buscarIMCs() {
         const retorno = await fetch("http://localhost:3000/imc")
         const dadosRetornados = await retorno.json();
 
+        //ordena pelo nome em ordem crescente
+        dadosRetornados.sort((a, b) => {
+            return a.nome.localeCompare(b.nome)
+        });
 
         await console.log(dadosRetornados); //dados do cadastro
 

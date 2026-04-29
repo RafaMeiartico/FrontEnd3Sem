@@ -64,8 +64,52 @@
       "IMC": 30.477966223242138,
       "textoSituacao": "Obesidade Grau I",
       "id": "Z2WVnQ38ctw"
+    },
+    {
+      "nome": "Anne",
+      "altura": 1.65,
+      "peso": 51,
+      "IMC": 18.73278236914601,
+      "textoSituacao": "Saudável",
+      "id": "UqJBqEZtMHs"
     }
   ],
-  "calculo": [],
+  "calculo": [
+    {
+      "n1": 1,
+      "n2": 1,
+      "op": "soma",
+      "resultado": "2.00",
+      "id": "dlxMpj6h0I0"
+    },
+    {
+      "n1": 1,
+      "n2": 1,
+      "op": "soma",
+      "resultado": "2.00",
+      "id": "DNUKDoUtatA"
+    },
+    {
+      "n1": 1,
+      "n2": 1,
+      "op": "soma",
+      "resultado": "2.00",
+      "id": "IOjxKfmbWEw"
+    },
+    {
+      "n1": 2,
+      "n2": 2,
+      "op": "multiplicacao",
+      "resultado": "4.00",
+      "id": "rncnrL5sR-U"
+    },
+    {
+      "n1": 10,
+      "n2": 20,
+      "op": "divisao",
+      "resultado": "0.50",
+      "id": "I0HAYup4rDk"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
