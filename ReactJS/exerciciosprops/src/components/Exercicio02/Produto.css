@@ -1,0 +1,23 @@
+.card-perfil{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 80px;
+    background-color: rgb(73, 73, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    transition: margin-top 0.4s, margin-left 0.4s, box-shadow 0.3s, background-color 0.4s;
+}
+
+.card-perfil:hover{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .6);
+    background-color: aliceblue;
+    color: rgb(73, 73, 255);
+    margin-left: 15px;
+    margin-top: 10px;
+}
