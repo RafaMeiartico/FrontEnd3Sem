@@ -1,0 +1,53 @@
+{
+  "produtos": [
+    {
+      "nome": "bia paz recalca",
+      "descricao": "a bia paz ta muito recalcada hoje",
+      "quantidade": 1,
+      "preco": 334,
+      "imagem": "imagem.jpg",
+      "id": "7CusgGw_FaU"
+    },
+    {
+      "nome": "bia paz recalca",
+      "descricao": "a bia paz ta muito recalcada hoje",
+      "quantidade": 1,
+      "preco": 334,
+      "imagem": "imagem.jpg",
+      "id": "wj8phFMVoSk"
+    },
+    {
+      "nome": "bia paz recalca",
+      "descricao": "a bia paz ta muito recalcada hoje",
+      "quantidade": 1,
+      "preco": 334,
+      "imagem": "imagem.jpg",
+      "id": "8EMSggKJhKQ"
+    },
+    {
+      "nome": "note",
+      "descricao": "note top",
+      "quantidade": 1,
+      "preco": 3,
+      "imagem": "imagem.jpg",
+      "id": "sIJIGe83sho"
+    },
+    {
+      "nome": "note",
+      "descricao": "computador top barato",
+      "quantidade": 2,
+      "preco": 4,
+      "imagem": "imagem.jpg",
+      "id": "SnLkgH4Htac"
+    },
+    {
+      "nome": "bia paz recalca",
+      "descricao": "a bia paz ta muito chata hoje",
+      "quantidade": 1,
+      "preco": 334,
+      "imagem": "imagem.jpg",
+      "id": "FbIyV_W-aBw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
